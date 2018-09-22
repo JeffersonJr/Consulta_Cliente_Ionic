@@ -1,0 +1,37 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>{{ title }}</ion-title>
+		<ion-title>Jefferson Junior 3IF3</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-list>
+		<ion-item>
+			<ion-label>Pessoas</ion-label>
+			<ion-select [(ngModel)]="pessoa" (ionChange)="onSelectChange($event)">
+				<ion-option value="1">George</ion-option>
+				<ion-option value="2">Janet</ion-option>
+				<ion-option value="3">Emma</ion-option>
+				<ion-option value="4">Holt</ion-option>
+				<ion-option value="5">Morris</ion-option>
+				<ion-option value="6">Ramos</ion-option>
+				<ion-option value="7">Lawson</ion-option>
+				<ion-option value="8">Ferguson</ion-option>
+				<ion-option value="9">Funke</ion-option>
+				<ion-option value="10">Field</ion-option>
+			</ion-select>
+		</ion-item>
+	</ion-list>
+
+	<span>Nome: {{ resultados?.data.first_name }}</span>
+	<br>
+	<span>Sobrenome: {{ resultados?.data.last_name }}</span>
+	<br><br>
+	<img src="{{ resultados?.data.avatar }}">
+
+	<!-- <div class="row" *ngFor="let data of resultado">
+        <div class="col">{{data.logradouro}}</div>
+        <div class="col">{{data.cep}}</div>          
+     </div> -->
+
+</ion-content>
